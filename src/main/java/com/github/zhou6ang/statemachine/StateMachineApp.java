@@ -1,4 +1,4 @@
-package org.bitframework.statemachine;
+package com.github.zhou6ang.statemachine;
 
 import java.io.IOException;
 import java.lang.reflect.Modifier;
@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
-import org.bitframework.statemachine.engine.StateEngine;
-import org.bitframework.statemachine.parsing.AnnotationParser;
+import com.github.zhou6ang.statemachine.engine.StateEngine;
+import com.github.zhou6ang.statemachine.parsing.AnnotationParser;
 import com.google.common.reflect.ClassPath;
 
 public class StateMachineApp 

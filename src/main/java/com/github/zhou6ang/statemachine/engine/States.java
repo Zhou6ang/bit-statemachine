@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.bitframework.statemachine.engine;
+package com.github.zhou6ang.statemachine.engine;
 
 /**
  * @author ganzhou

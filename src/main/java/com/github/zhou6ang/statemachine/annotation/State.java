@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.bitframework.statemachine.annotation;
+package com.github.zhou6ang.statemachine.annotation;
 
 import static java.lang.annotation.ElementType.TYPE;
 import static java.lang.annotation.ElementType.METHOD;

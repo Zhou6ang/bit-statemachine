@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.bitframework.statemachine.parsing;
+package com.github.zhou6ang.statemachine.parsing;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -12,9 +12,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.logging.Logger;
 
-import org.bitframework.statemachine.annotation.Action;
-import org.bitframework.statemachine.annotation.Condition;
-import org.bitframework.statemachine.annotation.State;
+import com.github.zhou6ang.statemachine.annotation.Action;
+import com.github.zhou6ang.statemachine.annotation.Condition;
+import com.github.zhou6ang.statemachine.annotation.State;
 
 /**
  * @author ganzhou
@@ -22,9 +22,9 @@ import org.bitframework.statemachine.annotation.State;
  */
 public class AnnotationParser {
 	private static final Logger logger = Logger.getLogger(AnnotationParser.class.getName());
-	private List<org.bitframework.statemachine.pojo.Action> actions = new ArrayList<>();
-	private List<org.bitframework.statemachine.pojo.Condition> conditions = new ArrayList<>();
-	private List<org.bitframework.statemachine.pojo.State> states = new ArrayList<>();
+	private List<com.github.zhou6ang.statemachine.pojo.Action> actions = new ArrayList<>();
+	private List<com.github.zhou6ang.statemachine.pojo.Condition> conditions = new ArrayList<>();
+	private List<com.github.zhou6ang.statemachine.pojo.State> states = new ArrayList<>();
 	
 	public AnnotationParser(Class<?>[] clzs) throws Exception{
 		if(clzs == null || clzs.length == 0){
@@ -36,15 +36,15 @@ public class AnnotationParser {
 		
 	}
 	
-	public List<org.bitframework.statemachine.pojo.Action> getActions() {
+	public List<com.github.zhou6ang.statemachine.pojo.Action> getActions() {
 		return actions;
 	}
 
-	public List<org.bitframework.statemachine.pojo.Condition> getConditions() {
+	public List<com.github.zhou6ang.statemachine.pojo.Condition> getConditions() {
 		return conditions;
 	}
 	
-	public List<org.bitframework.statemachine.pojo.State> getStates() {
+	public List<com.github.zhou6ang.statemachine.pojo.State> getStates() {
 		return states;
 	}
 
@@ -55,7 +55,7 @@ public class AnnotationParser {
 			for(Action act : m.getDeclaredAnnotationsByType(Action.class)){
 				String name = act.name().isEmpty() ? m.getName() : act.name();
 				validate(name,m,false,false,Arrays.asList(Object.class),Arrays.asList(Object.class));
-				org.bitframework.statemachine.pojo.Action action = new org.bitframework.statemachine.pojo.Action();
+				com.github.zhou6ang.statemachine.pojo.Action action = new com.github.zhou6ang.statemachine.pojo.Action();
 				action.setFrom(act.from());
 				action.setTo(act.to());
 				instance = instance == null ? newInstance(clz) : instance;
@@ -69,7 +69,7 @@ public class AnnotationParser {
 			for(Condition cond : m.getDeclaredAnnotationsByType(Condition.class)){
 				String name = cond.name().isEmpty() ? m.getName() : cond.name();
 				validate(name,m,false,true,Arrays.asList(Object.class),Arrays.asList(boolean.class,Boolean.class));
-				org.bitframework.statemachine.pojo.Condition condition = new org.bitframework.statemachine.pojo.Condition();
+				com.github.zhou6ang.statemachine.pojo.Condition condition = new com.github.zhou6ang.statemachine.pojo.Condition();
 				condition.setFrom(cond.from());
 				condition.setTo(cond.to());
 				instance = instance == null ? newInstance(clz) : instance;
@@ -83,7 +83,7 @@ public class AnnotationParser {
 			for(State sta : m.getDeclaredAnnotationsByType(State.class)){
 				String name = sta.value().isEmpty() ? m.getName() : sta.value();
 				validate(name,m,false,false,Arrays.asList(Object.class),Arrays.asList(Object.class));
-				org.bitframework.statemachine.pojo.State state = new org.bitframework.statemachine.pojo.State();
+				com.github.zhou6ang.statemachine.pojo.State state = new com.github.zhou6ang.statemachine.pojo.State();
 				instance = instance == null ? newInstance(clz) : instance;
 				state.setInstance(instance);
 				state.setMethod(m);

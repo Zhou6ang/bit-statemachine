@@ -1,13 +1,13 @@
-package org.bitframework.statemachine.test;
+package com.github.zhou6ang.test;
 
 import java.io.IOException;
 import java.util.Random;
 
-import org.bitframework.statemachine.StateMachineApp;
-import org.bitframework.statemachine.annotation.Action;
-import org.bitframework.statemachine.annotation.Condition;
-import org.bitframework.statemachine.annotation.State;
-import org.bitframework.statemachine.engine.States;
+import com.github.zhou6ang.statemachine.StateMachineApp;
+import com.github.zhou6ang.statemachine.annotation.Action;
+import com.github.zhou6ang.statemachine.annotation.Condition;
+import com.github.zhou6ang.statemachine.annotation.State;
+import com.github.zhou6ang.statemachine.engine.States;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

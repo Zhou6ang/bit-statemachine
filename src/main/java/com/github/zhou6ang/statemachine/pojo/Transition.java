@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.bitframework.statemachine.pojo;
+package com.github.zhou6ang.statemachine.pojo;
 
 /**
  * @author ganzhou

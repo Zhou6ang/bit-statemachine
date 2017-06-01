@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.bitframework.statemachine.engine;
+package com.github.zhou6ang.statemachine.engine;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,11 +9,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
 
-import org.bitframework.statemachine.parsing.AnnotationParser;
-import org.bitframework.statemachine.pojo.Action;
-import org.bitframework.statemachine.pojo.Condition;
-import org.bitframework.statemachine.pojo.State;
-import org.bitframework.statemachine.pojo.Transition;
+import com.github.zhou6ang.statemachine.parsing.AnnotationParser;
+import com.github.zhou6ang.statemachine.pojo.Action;
+import com.github.zhou6ang.statemachine.pojo.Condition;
+import com.github.zhou6ang.statemachine.pojo.State;
+import com.github.zhou6ang.statemachine.pojo.Transition;
 
 /**
  * @author ganzhou

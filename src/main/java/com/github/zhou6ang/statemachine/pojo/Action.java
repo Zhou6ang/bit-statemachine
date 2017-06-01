@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.bitframework.statemachine.pojo;
+package com.github.zhou6ang.statemachine.pojo;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
