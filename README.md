@@ -35,7 +35,7 @@ via parsing annotation once it loads classes.
 
 Installation
 ============
-#maven dependency
+### maven dependency
 ```xml
 <dependency>
     <groupId>com.github.zhou6ang.framework</groupId>
@@ -46,14 +46,14 @@ Installation
 
 Note
 =========
-1. @Condition and @State are mandatory, @Action is optional.
-2. Fields "name", "from" and "to" is mandatory for @Condition, default value of field "name" for @Condition is method name in class.
-3. Field "value" is mandatory for @State, default value of field "value" for @State is method name in class.
-4. All of method that used annotation's: parameter type should be Object type and size can 0 or 1; return type only can choose one of void and Object.
+### 1. @Condition and @State are mandatory, @Action is optional.
+### 2. Fields "name", "from" and "to" is mandatory for @Condition, default value of field "name" for @Condition is method name in class.
+### 3. Field "value" is mandatory for @State, default value of field "value" for @State is method name in class.
+### 4. All of method that used annotation's: parameter type should be Object type and size can 0 or 1; return type only can choose one of void and Object.
 
 Tutorial
 =========
-I. creating a maven java project as below structure.
+### I. creating a maven java project as below structure.
 
 ```java
 example
@@ -91,7 +91,7 @@ example
 ```
 more detail please go through https://github.com/Zhou6ang/bit-statemachine/tree/master/src/test/java/example
 
-II. registering entry class as below:
+### II. registering entry class as below:
 
 Program entry:
 ```java
