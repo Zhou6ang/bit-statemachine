@@ -71,7 +71,7 @@ public class StateEngine {
 			}
 
 			if (map.get(e.getName()) != null) {
-				throw new RuntimeException("Duplicate @State(\"" + e.getName() + "\") definition.");
+				throw new RuntimeException("Duplicate @Action(\"" + e.getName() + "\") definition.");
 			} else {
 				map.put(e.getName(), e);
 			}
