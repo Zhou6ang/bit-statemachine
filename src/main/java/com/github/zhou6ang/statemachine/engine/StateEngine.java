@@ -30,7 +30,7 @@ public class StateEngine {
 	private Map<String, List<Transition>> stateTransitionMap = new HashMap<>();
 
 	/**
-	 * @param ann
+	 * @param ann a instance of AnnotationParser.
 	 */
 	public StateEngine(AnnotationParser ann) {
 		List<State> states = ann.getStates();
@@ -235,14 +235,10 @@ public class StateEngine {
 		});
 	}
 
-	/**
-	 * @throws Exception
-	 * 
-	 */
-	public void start() throws Exception {
+	public void start(Object inputObj) throws Exception {
 		State startState = stateEntityMap.get(States.START_STATE);
 		if (startState != null) {
-			doExecution(startState, null);
+			doExecution(startState, inputObj);
 		} else {
 			throw new RuntimeException("No States.START_STATE found in @Condition.");
 		}
